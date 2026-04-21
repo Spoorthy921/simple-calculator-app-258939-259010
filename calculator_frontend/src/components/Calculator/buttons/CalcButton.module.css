@@ -1,0 +1,66 @@
+.button {
+  height: 54px;
+  min-width: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  background: #ffffff;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow: 0 2px 0 rgba(17, 24, 39, 0.06);
+  transition: transform 80ms ease, box-shadow 120ms ease, border-color 120ms ease,
+    background 120ms ease;
+}
+
+.button:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 3px 0 rgba(17, 24, 39, 0.08);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.08);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25), 0 2px 0 rgba(17, 24, 39, 0.06);
+  border-color: rgba(59, 130, 246, 0.55);
+}
+
+.default {
+  background: #ffffff;
+}
+
+.operator {
+  background: rgba(59, 130, 246, 0.09);
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.control {
+  background: rgba(100, 116, 139, 0.08);
+  border-color: rgba(100, 116, 139, 0.22);
+  color: #0f172a;
+}
+
+.equals {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: white;
+}
+
+@media (max-width: 360px) {
+  .button {
+    height: 50px;
+    min-width: 50px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+}
